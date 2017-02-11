@@ -14,9 +14,9 @@
 ; ******************************************************************************
 iod_kern_call_table:
     jmp iod_kern_main                ; 0000h
-    jmp iod_kern_ok                  ; 0003h
-    jmp iod_kern_string_print        ; 0006h
-    jmp iod_kern_string_length       ; 0009h
+    jmp iod_kern_string_print        ; 0003h
+    jmp iod_kern_string_length       ; 0006h
+
 ; ******************************************************************************
 ; KERNEL INITIALISATION
 ; ******************************************************************************
@@ -44,7 +44,6 @@ iod_kern_main:
     mov fs, ax
     mov gs, ax
 
-iod_kern_ok:
     mov ax, 1003h
     mov bx, 0
     int 10h
